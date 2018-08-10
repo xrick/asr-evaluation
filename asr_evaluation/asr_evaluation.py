@@ -227,8 +227,9 @@ def print_instances(ref, hyp, sm, id_=None):
     else:
         correct_rate = 0.0
         error_rate = sm.matches()
-    print('Correct          = {0:6.1%}  {1:3d}   ({2:6d})'.format(correct_rate, sm.matches(), len(ref)))
-    print('Errors           = {0:6.1%}  {1:3d}   ({2:6d})'.format(error_rate, sm.distance(), len(ref)))
+    print('Correct          = {0:6.3%}  {1:3d}   ({2:6d})'.format(correct_rate, sm.matches(), len(ref)))
+    print('Errors           = {0:6.3%}  {1:3d}   ({2:6d})'.format(error_rate, sm.distance(), len(ref)))
+
 
 def track_confusions(sm, seq1, seq2):
     """Keep track of the errors in a global variable, given a sequence matcher."""
